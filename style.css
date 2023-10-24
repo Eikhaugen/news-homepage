@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 16px 32px 16px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.web3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: web3;
+}
+
+
+.web3 h2{
+    font-size: 56px;
+    grid-area: web3-h2;
+    text-align: left;
+}
+
+.web3 p{
+    font-size: 15px;
+    color: #5E607A;
+    grid-area: web3-p;
+    text-align: left;
+}
+
+.web3 button{
+    background-color: #F15D51;
+    color: white;
+    width: 185px;
+    height: 48px;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 4.38px;
+    grid-area: web3-btn;
+}
+
+.web3 img {
+    width: 100%;
+    grid-area: web3-img;
+}
+
+.new {
+    background-color: #00001A;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    grid-area: new;
+    padding: 16px;
+}
+
+.new li{
+    list-style: none;
+}
+
+.new h2 {
+    color: #E9AA52;
+    font-size: 32px;
+}
+
+.container-3 {
+    height: 451px;
+    grid-area: c3;
+}
+
+/* Small (sm) */
+@media (min-width: 640px) {
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+    .navbar ul{
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    .web3 img{
+        height: 300px;
+    }
+    .navbar .menu-icon{
+        display: none;
+    }
+
+    .web3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+        "web3-img web3-img"
+        "web3-h2 web3-p"
+        "web3-h2 web3-btn";
+        grid-area: web3;
+
+    }
+    .container-3{
+        display: flex;
+        flex-direction: row;
+    }
+    .new{
+        grid-area: new;
+    }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+    /* Your styles for the extra large breakpoint here */
+}
+
+/* 2XL (2xl) */
+@media (min-width: 1536px) {
+    /* Your styles for the 2XL breakpoint here */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
